@@ -10,11 +10,17 @@
     "logs": "firebase functions:log"
   },
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "dependencies": {
+    "@google-cloud/storage": "^4.7.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "firebase-admin": "^8.10.0",
-    "firebase-functions": "^3.6.1"
+    "firebase-functions": "^3.6.1",
+    "multer": "^1.4.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "eslint": "^5.12.0",

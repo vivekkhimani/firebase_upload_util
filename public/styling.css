@@ -1,0 +1,81 @@
+h1 {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    color : #17a2b7;
+}
+
+#topLine, #header {
+    display : flex;
+    flex-direction : row;
+    justify-content: flex-end;
+}
+#header {
+    align-self: flex-start;
+}
+/*
+#signoutBtn, #showRemoveBtn {
+    align-self: flex-end;
+}*/
+
+.outerDiv {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    display: inline-block;
+    background:white;
+    width:400px;
+    border-radius:6px;
+    /*margin-left: 50vmax;
+    margin-top: 10px;*/
+    position: fixed;
+    left: 50%;
+    margin-left: -200px;
+    padding:0px 0px 70px 0px;
+    border: #17a2b7 4px solid; 
+    height:87vh;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+
+
+.login input, .login label {
+    /*display: flex;*/
+    margin:2px 0 20px 10px;
+}
+
+.createAcct input, .createAcct label {
+    /*display: block;*/
+    margin:2px 20px 20px 10px;
+}
+
+#formErrors {
+    display: none;
+    color: red;
+}
+
+#loginErrors {
+    display: none;
+    color: red;
+}
+
+#createAcct, #loginBtn {
+    margin:2px 20px 20px 10px;
+}
+#removeUser {
+    display: none;
+}
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width:100%;
+}
+
+td{
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+}
+
+#history_div{
+    visibility: hidden;
+    margin-top: 10px;
+}

@@ -1,0 +1,83 @@
+<!-- Developer: Vivek Khimani. -->
+
+<!--
+    - Set a 100 MB limit warning on index.html.
+    - Change link uploads to file upload values.
+    - Change JavaScript to receive the files instead of links.
+    - Send files to the server.
+    - Add StorageDownloadLink fields in the database
+    --->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>
+        Upload Content
+    </title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Ash Initiative</a>
+    </nav>
+    <br>
+    <div class="outerDiv">
+        <h1 style="margin-top:5px">Upload</h1>
+        <br>
+        <div class="createAcct">
+            <!--<label for="fNameCA">First Name</label>-->
+            <label for="fNameCA">First Name:</label>
+            <input type="text" id="fNameCA" placeholder="first name" required>
+            <br>
+            <!--<label for="lNameCA">Last Name</label>-->
+            <label for="lNameCA">Last Name:</label>
+            <input type="text" id="lNameCA" placeholder="last name" required>
+            <br>
+            <br>
+            <label for="numObjects">Total Uploads:</label>
+            <select id="numObjects" onchange="totalVal()">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <br>
+            <label id="label1a" for="gDrive1">URL 1</label>
+            <input id="gDrive1" placeholder="Google Drive Link 1">
+            <br>
+            <label id="label1b" for="description1">Description</label>
+            <input id="description1" placeholder="Description 1">
+            <br>
+            <label id="label2a" for="gDrive2" style="visibility: hidden;">URL 2</label>
+            <input id="gDrive2" style="visibility: hidden;" placeholder="Google Drive Link 2">
+            <br>
+            <label id="label2b" for="description2" style="visibility: hidden;">Description</label>
+            <input id="description2" style="visibility: hidden;" placeholder="Description 2">
+            <br>
+            <button type="submit" class="btn btn-outline-info" id="createAcct">Submit</button>
+            <div id="blank_success" style="visibility: hidden; color: red">
+                <ul>
+                    <li>Successfully added.</li>
+                </ul>
+            </div>
+            <div id="blank_failure" style="visibility: hidden; color: red">
+                <ul>
+                    <li>Failed. Hmm, seems like you are trying to bypass the email verification step. Reach out to any of the team members in any case.</li>
+                </ul>
+            </div>
+        </div>
+        <div id="formErrors"></div>
+        <footer>
+            © Copyright 2020, Vivek Khimani.
+        </footer>
+    </div>
+</body>
+
+</html>
